@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Mes évènements </h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Date</td>
+      <td>Description</td>
+      <td>Lieu</td>
+      <td>Prix</td>
+      <td>Créateur de l'évènement</td>
+      <td colspan="3"></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.date %></td>
+        <td><%= event.description %></td>
+        <td><%= event.place %></td>
+        <td><%= event.price %></td>
+        <td><%= event.creator_id %></td>
+        <td><%= link_to 'Voir', event %></td>
+        
+        <td><%= link_to 'Editer', edit_event_path(event) %></td>
+        <td><%= link_to 'Supprimer', event, method: :delete, data: { confirm: 'Êtes-vous sûr?' } %></td>
+     
+      </tr>
+      
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nouvel évènement', new_event_path %>
