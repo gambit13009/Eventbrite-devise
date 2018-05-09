@@ -39,6 +39,10 @@ Pour ce Mardi 08 Mai 2018 dans le cadre de l'approfoncdissement de Ruby on Rails
 # Consignes d'utilisation
 
 ## Tests en local:
+Pour commencer créer un fichier.env et mettre les clés d"API ci-dessous :
+
+STRIPE_PUBLISHABLE_KEY="pk_test_6pRNASCoBOKtIshFeQd4XMUh" STRIPE_SECRET_KEY="sk_test_BQokikJOvBiI2HlWgH4olfQ2"
+
 
 Pour ouvrir chaque app et la tester il faut downloader le dossier, se placer dedans dans votre terminal et lancer en commande:
 
